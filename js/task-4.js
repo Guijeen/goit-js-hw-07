@@ -5,7 +5,7 @@ function handlerForm(event) {
   event.preventDefault();
   const inputs = event.target.elements;
 
-  if (inputs.password.value === "" || inputs.email.value === "") {
+  if (inputs.password.value.trim() === "" || inputs.email.value.trim() === "") {
     alert("'All form fields must be filled in");
   } else {
     const formValues = {

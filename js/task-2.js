@@ -29,9 +29,9 @@ function createGalery(obj) {
   let insertGalery = obj.map((image)=>{ 
     return`<li>
     <img class="gallary-image" 
-      src=${image.url} 
-      alt=${image.alt} 
-      width=360 
+      src="${image.url} "
+      alt="${image.alt} "
+      width="360"
       />
     </li>`
   }).join("")  
@@ -40,4 +40,4 @@ function createGalery(obj) {
 
 
 const galaryList = document.querySelector(".gallery")
-galaryList.innerHTML= createGalery(images)
+galaryList.insertAdjacentHTML("beforeend", createGalery(images))
